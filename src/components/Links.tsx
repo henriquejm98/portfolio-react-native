@@ -1,7 +1,7 @@
 import React from 'react';
-import { Linking, StyleSheet, View } from 'react-native';
+import { Alert, Linking, StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
-import { NavigationProp, ParamListBase, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 export function Links() {
     const navigateToExternal = async (urlApp: string, urlWeb: string) => {
@@ -20,6 +20,18 @@ export function Links() {
         const rootNav = navigation.getParent();
         rootNav?.navigate('webview', { url });
     };
+
+    const handleEmail = () => {
+        const email = "henrique.jaldim@hotmail.com";
+        const subject = "Contato";
+        const body = "Olá, gostaria de falar sobre...";
+
+        const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        Linking.openURL(url).catch(() => {
+        Alert.alert("Erro", "Não foi possível abrir o aplicativo de e-mail.");
+        });
+    }
 
 
 
@@ -49,6 +61,17 @@ export function Links() {
             mode="contained"
             onPress={() => openWebView("https://github.com/henriquejm98")}
             />
+
+            <Button
+            labelStyle={styles.labelButton}
+            contentStyle={styles.contentButton}
+            children="Enviar E-mail" 
+            icon="mail" 
+            buttonColor='#1a9b9dd1' 
+            style={styles.button}
+            mode="contained"
+            onPress={handleEmail}
+            />
         </View>
     );
 }
@@ -68,7 +91,7 @@ const styles = StyleSheet.create({
     },
     labelButton: {
         fontSize: 30,
-        lineHeight: 30
+        lineHeight: 40
     },
     contentButton: {
         height: 60,

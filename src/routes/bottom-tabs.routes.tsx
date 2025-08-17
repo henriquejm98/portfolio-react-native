@@ -2,6 +2,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HomeScreen } from "../pages/HomeScreen";
 import { Skills } from "../pages/Skills";
 import Feather from '@expo/vector-icons/Feather';
+import Octicons from '@expo/vector-icons/Octicons';
+import { About } from "../pages/About";
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
@@ -21,10 +23,13 @@ export function BottomTabsRoutes() {
         />
         <Screen 
         name="about me"
-        component={HomeScreen}
+        component={About}
         options={{
             headerShown: false,
-            title: "Sobre mim"
+            title: "Sobre mim",
+            tabBarIcon: ({color, size}) => (
+              <Octicons name="person" size={size} color={color} />
+            )
         }}
         />
         <Screen 
