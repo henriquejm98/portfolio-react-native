@@ -46,17 +46,13 @@ git clone https://github.com/henriquejm98/portfolio-react-native
 2. Install dependencies:
 ```bash
 npm install
-```
-or
-```bash
+#or
 yarn install
 ```
 3. Run the app:
 ```bash
 npm start
-```
-or
-```bash
+#or
 yarn start
 ```
 4. Open it on an emulator or on your device using Expo Go (if applicable).
