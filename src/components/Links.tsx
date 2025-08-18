@@ -8,7 +8,7 @@ export function Links() {
         try {
             await Linking.openURL(urlApp);
         } catch {
-            await Linking.openURL(urlWeb);
+            openWebView(urlWeb)
         }
     }
 

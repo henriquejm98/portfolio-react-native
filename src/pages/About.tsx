@@ -7,7 +7,7 @@ export function About() {
   return (
     <View style={styles.container}>
       <Picture />
-      <ScrollView style={{ marginTop: 20, padding: 20}}>
+      <ScrollView style={{ marginTop: 30, marginLeft: 10, marginRight: 10}}>
         <Text style={styles.text} variant='titleLarge'>
           Olá, me chamo Henrique Jaldim Mosca.
         </Text>
