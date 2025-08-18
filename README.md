@@ -47,7 +47,7 @@ git clone https://github.com/henriquejm98/portfolio-react-native
 ```bash
 npm install
 ```
-# or
+or
 ```bash
 yarn install
 ```
@@ -55,7 +55,7 @@ yarn install
 ```bash
 npm start
 ```
-# or
+or
 ```bash
 yarn start
 ```
