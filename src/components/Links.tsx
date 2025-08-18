@@ -65,7 +65,7 @@ export function Links() {
             labelStyle={styles.labelButton}
             contentStyle={styles.contentButton}
             children="Enviar E-mail" 
-            icon="mail" 
+            icon="email" 
             buttonColor='#1a9b9dd1' 
             style={styles.button}
             mode="contained"

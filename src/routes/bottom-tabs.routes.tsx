@@ -3,6 +3,7 @@ import { HomeScreen } from "../pages/HomeScreen";
 import { Skills } from "../pages/Skills";
 import Feather from '@expo/vector-icons/Feather';
 import Octicons from '@expo/vector-icons/Octicons';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { About } from "../pages/About";
 
 const { Navigator, Screen } = createBottomTabNavigator()
@@ -37,7 +38,10 @@ export function BottomTabsRoutes() {
         component={Skills}
         options={{
             headerShown: false,
-            title: "Habilidades"
+            title: "Habilidades",
+            tabBarIcon: ({color, size}) => (
+              <AntDesign name="setting" size={size} color={color} />
+            )
         }}
         />
     </Navigator>
