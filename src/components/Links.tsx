@@ -5,11 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 
 export function Links() {
     const navigateToExternal = async (urlApp: string, urlWeb: string) => {
-        const supported = await Linking.canOpenURL(urlApp);
-        if (supported) {
+        try {
             await Linking.openURL(urlApp);
-        } else {
-            openWebView(urlWeb)
+        } catch {
+            await Linking.openURL(urlWeb);
         }
     }
 
@@ -46,7 +45,7 @@ export function Links() {
             style={styles.button} 
             mode="contained"
             onPress={() => navigateToExternal(
-                'linkedin://profile/henriquejm98', 
+                'linkedin://in/henriquejm98', 
                 'https://www.linkedin.com/in/henriquejm98'
             )}
             />

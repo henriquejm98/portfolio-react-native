@@ -1,4 +1,3 @@
-import { HomeScreen } from "../pages/HomeScreen";
 import { WebViewComponent } from "../pages/WebViewComponent";
 import { createStackNavigator } from "@react-navigation/stack";
 import { BottomTabsRoutes } from "./bottom-tabs.routes";
@@ -12,7 +11,7 @@ export function StackRoutes() {
         name="webview"
         component={WebViewComponent}
         options={{
-            headerShown: false,
+          headerShown: true,
         }}
         />
     </Navigator>
