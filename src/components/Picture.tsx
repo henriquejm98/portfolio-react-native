@@ -6,7 +6,7 @@ import { Avatar } from 'react-native-paper';
 export function Picture() {
   return (
     <>
-        <Avatar.Image style={styles.avatar} size={150} source={profilePic} />
+        <Avatar.Image style={styles.avatar} size={100} source={profilePic} />
     </>
   );
 }

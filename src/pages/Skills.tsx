@@ -10,8 +10,8 @@ export function Skills() {
     <View style={styles.container}>
       <Picture />
       <View style={{ marginLeft: 10, marginRight: 10, marginBottom: 30, marginTop: 30}}>
-        <Text variant='titleLarge' style={styles.text}>Abaixo estão algumas das tecnologias com as quais trabalho e meu nível de habilidade em cada uma.</Text>
-        <Text variant='bodyLarge' style={styles.text}>Para descobrir o nome de cada tecnologia, pressione e segure o ícone por alguns instantes.</Text>
+        <Text variant='titleMedium' style={styles.text}>Abaixo estão algumas das tecnologias com as quais trabalho e meu nível de habilidade em cada uma.</Text>
+        <Text variant='bodyMedium' style={styles.text}>Para descobrir o nome de cada tecnologia, pressione e segure o ícone por alguns instantes.</Text>
       </View>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.skillItem}>
